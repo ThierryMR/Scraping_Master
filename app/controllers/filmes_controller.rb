@@ -7,6 +7,11 @@ class FilmesController < ApplicationController
     @filmes = Filme.all
   end
 
+  def import
+    Filme.import(params[:file])
+    redirect_to root_url, notice: "Activity Data Imported!"
+  end
+
   def show
   end
 

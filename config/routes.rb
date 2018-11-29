@@ -1,5 +1,11 @@
 Rails.application.routes.draw do
 
-  resources :filmes
+  get 'testes/index'
+  get 'testes/import'
+  resources :filmes do
+    collection {post :import}
+  end
+
+  root to: "filmes#index"
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 end

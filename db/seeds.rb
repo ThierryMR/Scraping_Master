@@ -5,11 +5,3 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
-require "csv"
-
-CSV.foreach("FilmesKG.csv") do |row|
-  puts row[0]
-  p row[1]
-  p row[2]
-
-end
