@@ -1,0 +1,30 @@
+<h1>Filmes#index</h1>
+<p>Find me in app/views/filmes/index.html.erb</p>
+<%= flash[:notice]  %>
+ <table>
+<% @filmes.each do |f|  %>
+ <thead>
+  <tr>
+    <th>Title</th>
+    <th>Summary </th>
+    <th> Rating</th>
+  </tr>
+  </thead>
+  <tbody>
+  <tr>
+    <td>  <%=f.title.upcase  %> </td>
+    <td>  <%=f.summary  %> </td>
+     <td> <%=f.rating  %> </td>
+  </tr>
+  <% end %>
+  </tbody>
+</table>
+
+<div>
+  <h4>Import that Data!</h4>
+
+  <%= form_tag import_filmes_path, multipart: true do  %>
+  <%= file_field_tag :file  %>
+  <%= submit_tag "Import CSV"  %>
+  <% end %>
+</div>
