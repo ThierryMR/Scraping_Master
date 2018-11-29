@@ -1,2 +1,18 @@
 <h1>Filmes#index</h1>
 <p>Find me in app/views/filmes/index.html.erb</p>
+
+<% @filmes.each do |f|  %>
+ <table>
+ <thead>
+  <td>Title</td>
+  <td>Summary </td>
+  <td> Rating</td>
+  </thead>
+  <tbody>
+  <td>  <%=f.title.upcase  %> </td>
+  <td>  <%=f.summary  %> </td>
+   <td> <%=f.rating  %> </td>
+  </td>
+  </tbody>
+  <% end %>
+</table>
