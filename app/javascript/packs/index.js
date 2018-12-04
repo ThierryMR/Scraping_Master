@@ -16,35 +16,40 @@ scrapeIt("https://coinmarketcap.com/currencies/bitcoin/historical-data/?start=20
     thead: "thead"
     // , tbody: "tr"
     // , dates: ".text-left"
-    ,td: "table td[data-format-value]"
+    ,td: "table td[data-format-value]"    // ,more: document.querySelectorAll('table td[data-format-value]')[5].dataset.formatValue
+
     // , teste: ".text-right"
     // , title: "h2.bottom-margin-1x"
 }).then(({ data, response }) => {
     console.log(`Status Code: ${response.statusCode}`)
     // array = data
-    // console.log(data)
+    console.log(data)
+    // console.log(data[td:])
 
 })
 
 
-function imprimir(item) {
-    console.log(item);
-}
-  // data.forEach(imprimir)
 
-// for (i = 0, i < 10, i++){
-//   console.log("Hello World")
+// document.querySelectorAll('table td[data-format-value]')[i].dataset.formatValue
+
+// function imprimir(item) {
+//     console.log(item);
 // }
+//   // data.forEach(imprimir)
 
-let samba = [1,2,3,4,5,6,7,8,9,10]
+// // for (i = 0, i < 10, i++){
+// //   console.log("Hello World")
+// // }
 
-for (let i of samba) {
+// let samba = [1,2,3,4,5,6,7,8,9,10]
 
-   console.log(samba[i])// logs "3", "5", "7"
-}
-// console.log(data)
-// array.forEach(imprimir)
-for (j = 3; j < 6 ; j++) {
-    console.log("Hello World")
+// for (let i of samba) {
 
-}
+//    console.log(samba[i])// logs "3", "5", "7"
+// }
+// // console.log(data)
+// // array.forEach(imprimir)
+// for (j = 3; j < 6 ; j++) {
+//     console.log("Hello World")
+
+// }

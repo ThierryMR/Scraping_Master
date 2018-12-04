@@ -24,10 +24,10 @@ for (j = 0; j < 5 ; j++) {
     let sum;
     sum = item*6
     console.log(item*6);
-    if (item < 9){
-      console.log(`Abaixo de 9 valor igual item: ${item} sum: ${sum} `)
+    if (sum < 40){
+      console.log(`Abaixo de 40 valor igual item: ${item} sum: ${sum} `)
     } else {
-      console.log(`Acima de 9 valor igual a item: ${item} sum: ${sum}`)
+      console.log(`Acima de 40 valor igual a item: ${item} sum: ${sum}`)
     }
 
     // }else {
