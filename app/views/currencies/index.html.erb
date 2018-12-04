@@ -4,10 +4,10 @@
 
 
 <% @currencies.each do |c|  %>
-
+  <%=c.name  %>
+  <%=c.date  %>
   <%=c.open  %>
   <%=c.high  %>
-  <%=c.date  %>
   <%=c.close %>
 
 <% end %>
