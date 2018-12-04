@@ -8,6 +8,8 @@
 
 require 'open-uri'
 require 'nokogiri'
+
+
 currencies = ["bitcoin", "ethereum", "ripple"]
 
 currencies.each do |currency|
@@ -22,11 +24,42 @@ currencies.each do |currency|
     end
 
   newArray.each do |element|
-    p "Scraping #{currency}"
-    puts element[0]
-    # p element[1]
+    currency = Currency.new
+    p "Foi criada a currency #{currencies}"
+    currency.date = element[0]
+    currency.open = element[1].to_f
+    currency.high = element[2].to_f
+    currency.low = element[3].to_f
+    currency.close = element[4].to_f
+    currency.volume = element[5].to_f
+    currency.MarketCap = element[6].to_f
+    currency.save!
+    p "Currency foi salvada"
+    # currency.name = "#{currencies}"
     end
   end
+
+# ------------------------------------------------------------------------------
+# MELHOR E MAIS COMPLETA TENTATIVA
+# currencies = ["bitcoin", "ethereum", "ripple"]
+
+# currencies.each do |currency|
+#   url3 = "https://coinmarketcap.com/currencies/#{currency}/historical-data/"
+
+#   html_cripto2 = open(url3).read
+#   html_docripto2 = Nokogiri::HTML(html_cripto2)
+
+#   newArray = []
+#   html_docripto2.search('.table tbody tr').each do |element|
+#     newArray << element.text.strip.split("\n")
+#     end
+
+#   newArray.each do |element|
+#     p "Scraping #{currency}"
+#     puts element[0]
+#     # p element[1]
+#     end
+#   end
 
 # ////////------------------------------------------------------------------------
 # Tentativa 5 a melhor e mais completa
