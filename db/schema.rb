@@ -10,10 +10,32 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2018_11_29_161539) do
+ActiveRecord::Schema.define(version: 2018_12_04_224158) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "currencies", force: :cascade do |t|
+    t.string "date"
+    t.float "open"
+    t.float "high"
+    t.float "low"
+    t.float "close"
+    t.float "volume"
+    t.float "MarketCap"
+    t.float "median_price"
+    t.float "return"
+    t.float "std_price"
+    t.float "sum"
+    t.float "media_volume"
+    t.float "std_volume"
+    t.string "name"
+    t.boolean "buy"
+    t.boolean "seel"
+    t.float "sharp_ratio"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
 
   create_table "filmes", force: :cascade do |t|
     t.string "title"

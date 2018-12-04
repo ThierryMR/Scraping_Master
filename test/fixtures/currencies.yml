@@ -1,0 +1,39 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  date: MyString
+  open: 1.5
+  high: 1.5
+  low: 1.5
+  close: 1.5
+  volume: 1.5
+  MarketCap: 1.5
+  median_price: 1.5
+  return: 1.5
+  std_price: 1.5
+  sum: 1.5
+  media_volume: 1.5
+  std_volume: 1.5
+  name: MyString
+  buy: false
+  seel: false
+  sharp_ratio: 1.5
+
+two:
+  date: MyString
+  open: 1.5
+  high: 1.5
+  low: 1.5
+  close: 1.5
+  volume: 1.5
+  MarketCap: 1.5
+  median_price: 1.5
+  return: 1.5
+  std_price: 1.5
+  sum: 1.5
+  media_volume: 1.5
+  std_volume: 1.5
+  name: MyString
+  buy: false
+  seel: false
+  sharp_ratio: 1.5
