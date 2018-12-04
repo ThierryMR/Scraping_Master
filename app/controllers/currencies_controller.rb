@@ -3,7 +3,7 @@ class CurrenciesController < ApplicationController
     @currency = Currency.new
   end
   def index
-    @currency = Currency.all
+    @currencies = Currency.all
   end
 
   def create

@@ -12,8 +12,8 @@ require 'nokogiri'
 
 currencies = ["bitcoin", "ethereum", "ripple"]
 
-currencies.each do |currency|
-  url3 = "https://coinmarketcap.com/currencies/#{currency}/historical-data/"
+currencies.each do |name|
+  url3 = "https://coinmarketcap.com/currencies/#{name}/historical-data/"
 
   html_cripto2 = open(url3).read
   html_docripto2 = Nokogiri::HTML(html_cripto2)
@@ -26,6 +26,7 @@ currencies.each do |currency|
   newArray.each do |element|
     currency = Currency.new
     p "Foi criada a currency #{currencies}"
+    currency.name = "#{name}"
     currency.date = element[0]
     currency.open = element[1].to_f
     currency.high = element[2].to_f

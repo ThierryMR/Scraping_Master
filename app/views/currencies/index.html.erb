@@ -1,2 +1,13 @@
 <h1>Currencies#index</h1>
 <p>Find me in app/views/currencies/index.html.erb</p>
+
+
+
+<% @currencies.each do |c|  %>
+
+  <%=c.open  %>
+  <%=c.high  %>
+  <%=c.date  %>
+  <%=c.close %>
+
+<% end %>
