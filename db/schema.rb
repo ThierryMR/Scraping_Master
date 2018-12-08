@@ -26,7 +26,7 @@ ActiveRecord::Schema.define(version: 2018_12_04_224158) do
     t.float "median_price"
     t.float "return"
     t.float "std_price"
-    t.float "sum"
+    t.float "sum", default: [], array: true
     t.float "media_volume"
     t.float "std_volume"
     t.string "name"

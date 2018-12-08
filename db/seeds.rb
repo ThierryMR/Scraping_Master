@@ -9,7 +9,7 @@
 require 'open-uri'
 require 'nokogiri'
 
-
+sum = []
 currencies = ["bitcoin", "ethereum", "ripple"]
 
 currencies.each do |name|
@@ -38,6 +38,19 @@ currencies.each do |name|
     p "Currency foi salvada"
     # currency.name = "#{currencies}"
     end
+    sum = []
+    teste = Currency.all
+
+    teste.select do |try|
+      sum << try.open if try.name == "ethereum"
+    end
+    # p mean(sum)
+    p sum.sum
+    p "Realmente ficando foda nesse assunto porra #{sum * 20}"
+  # teste = Currency.all
+  #   teste.select do |try|
+  #     Currency.sum << try.open if try.name == "ethereum"
+  #   end
   end
 
 # ------------------------------------------------------------------------------

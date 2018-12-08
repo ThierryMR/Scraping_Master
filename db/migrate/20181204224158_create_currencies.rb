@@ -11,7 +11,7 @@ class CreateCurrencies < ActiveRecord::Migration[5.2]
       t.float :median_price
       t.float :return
       t.float :std_price
-      t.float :sum
+      t.float :sum, array: true, default: []
       t.float :media_volume
       t.float :std_volume
       t.string :name
