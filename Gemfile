@@ -34,6 +34,10 @@ gem 'simple_form'
 # Use ActiveStorage variant
 # gem 'mini_magick', '~> 4.8'
 
+# Charts
+gem 'graph'
+gem 'chartkick'
+
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 
